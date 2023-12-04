@@ -61,13 +61,13 @@ export default function LoginForm() {
         )}
         <form
           onSubmit={form.handleSubmit(async (data) => await onSubmit(data))}
-          className="flex flex-col justify-between items-center mt-5 space-y-5"
+          className="flex flex-col justify-between items-center mt-5 space-y-5 w-full"
         >
           <FormField
             control={form.control}
             name="email"
             render={({ field }) => (
-              <FormItem>
+              <FormItem className="w-1/4">
                 <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input placeholder="naam@voorbeeld.nl" {...field} />
@@ -80,7 +80,7 @@ export default function LoginForm() {
             control={form.control}
             name="password"
             render={({ field }) => (
-              <FormItem>
+              <FormItem className="w-1/4">
                 <FormLabel>Wachtwoord</FormLabel>
                 <FormControl>
                   <Input type="password" placeholder="wachtwoord" {...field} />
